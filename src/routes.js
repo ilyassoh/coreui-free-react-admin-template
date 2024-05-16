@@ -3,6 +3,12 @@ import React from 'react'
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
 const Typography = React.lazy(() => import('./views/theme/typography/Typography'))
+const UsersCrud = React.lazy(() => import('./views/actions/userscrud/UsersCrud'))
+const UpdateUser = React.lazy(() => import('./views/actions/updateuser/UpdateUser'))
+const Reservation = React.lazy(() => import('./views/actions/reservation/Reservation'))
+const Client = React.lazy(() => import('./views/actions/client/Client'))
+const Place = React.lazy(() => import('./views/actions/place/Place'))
+
 
 // Base
 const Accordion = React.lazy(() => import('./views/base/accordion/Accordion'))
@@ -55,6 +61,11 @@ const routes = [
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', element: Colors },
+  { path: '/actions/userscrud', name: 'UsersCrud', element: UsersCrud },
+  { path: '/actions/reservation', name: 'Reservation', element: Reservation },
+  { path: '/actions/client', name: 'Clients', element: Client },
+  { path: '/actions/place', name: 'Places', element: Place },
+  { path: '/actions/updateuser', name: 'UpdateUser', element: UpdateUser },
   { path: '/theme/typography', name: 'Typography', element: Typography },
   { path: '/base', name: 'Base', element: Cards, exact: true },
   { path: '/base/accordion', name: 'Accordion', element: Accordion },
